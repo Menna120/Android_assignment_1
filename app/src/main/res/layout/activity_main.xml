@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:paddingVertical="64dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/facebook_logo_image"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:adjustViewBounds="true"
+        android:importantForAccessibility="no"
+        android:src="@drawable/facebook_logo"
+        app:layout_constraintEnd_toEndOf="@id/email_or_phone_number_edit_text"
+        app:layout_constraintStart_toStartOf="@id/email_or_phone_number_edit_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/email_or_phone_number_edit_text"/>
+
+    <EditText
+        android:id="@+id/email_or_phone_number_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:autofillHints="emailAddress|phone"
+        android:background="@color/white"
+        android:hint="@string/email_or_phone_number"
+        android:inputType="textEmailAddress|phone"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/facebook_logo_image"
+        app:layout_constraintWidth_percent=".9" />
+
+    <EditText
+        android:id="@+id/password_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="password"
+        android:background="@color/white"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="@id/email_or_phone_number_edit_text"
+        app:layout_constraintStart_toStartOf="@id/email_or_phone_number_edit_text"
+        app:layout_constraintTop_toBottomOf="@id/email_or_phone_number_edit_text" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/corner_background"
+        android:paddingVertical="8dp"
+        android:text="@string/log_in"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/email_or_phone_number_edit_text"
+        app:layout_constraintStart_toStartOf="@id/email_or_phone_number_edit_text"
+        app:layout_constraintTop_toBottomOf="@id/password_edit_text" />
+
+    <TextView
+        android:id="@+id/sign_up_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/sign_up_for_facebook"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/help_center_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_button"
+        app:layout_constraintVertical_bias="0.98" />
+
+    <TextView
+        android:id="@+id/help_center_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/help_center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/sign_up_text_view"
+        app:layout_constraintStart_toStartOf="@id/sign_up_text_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
