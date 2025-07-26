@@ -6,20 +6,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
-    android:paddingVertical="64dp"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/facebook_logo_image"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:adjustViewBounds="true"
-        android:importantForAccessibility="no"
-        android:src="@drawable/facebook_logo"
-        app:layout_constraintEnd_toEndOf="@id/email_or_phone_number_edit_text"
-        app:layout_constraintStart_toStartOf="@id/email_or_phone_number_edit_text"
+    <TextView
+        android:id="@+id/facebook_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/facebook"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/email_or_phone_number_edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/email_or_phone_number_edit_text"/>
+        app:layout_constraintVertical_bias="0.7" />
 
     <EditText
         android:id="@+id/email_or_phone_number_edit_text"
@@ -31,9 +33,11 @@
         android:hint="@string/email_or_phone_number"
         android:inputType="textEmailAddress|phone"
         android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/facebook_logo_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45"
         app:layout_constraintWidth_percent=".9" />
 
     <EditText
@@ -72,14 +76,13 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@id/help_center_text_view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_button"
-        app:layout_constraintVertical_bias="0.98" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/help_center_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
         android:text="@string/help_center"
         android:textColor="@color/white"
         android:textSize="18sp"
