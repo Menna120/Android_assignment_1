@@ -2,8 +2,16 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Android_assignment_1" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-         <item name="colorPrimary">@color/primary_color</item>
     </style>
 
     <style name="Theme.Android_assignment_1" parent="Base.Theme.Android_assignment_1" />
+
+    <style name="LoginButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="cornerRadius">4dp</item>
+        <item name="backgroundTint">@color/primary_color</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
 </resources>
