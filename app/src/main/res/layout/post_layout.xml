@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
-    android:paddingBottom="8dp">
+    android:paddingVertical="16dp">
 
     <ImageView
         android:id="@+id/profile_image"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:contentDescription="@string/profile_picture_description"
         android:src="@drawable/yellow_circle_background"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,12 +22,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="@string/user_name"
+        android:layout_marginTop="8dp"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/profile_image"
-        app:layout_constraintTop_toTopOf="@id/profile_image" />
+        app:layout_constraintTop_toTopOf="@id/profile_image"
+        tools:text="@string/user_name" />
 
     <TextView
         android:id="@+id/post_metadata"
@@ -37,12 +38,12 @@
         android:layout_marginTop="4dp"
         android:drawablePadding="4dp"
         android:gravity="center"
-        android:text="@string/post_metadata"
         android:textColor="@color/gray"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:drawableEndCompat="@drawable/ic_earth"
         app:layout_constraintStart_toEndOf="@id/profile_image"
-        app:layout_constraintTop_toBottomOf="@id/user_name" />
+        app:layout_constraintTop_toBottomOf="@id/user_name"
+        tools:text="@string/post_metadata" />
 
     <ImageView
         android:id="@+id/menu_icon"
@@ -62,38 +63,39 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="@string/post_text"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profile_image" />
+        app:layout_constraintTop_toBottomOf="@id/profile_image"
+        tools:text="@string/post_text" />
 
     <TextView
         android:id="@+id/post_link"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:autoLink="web"
-        android:text="@string/post_link"
         android:textColor="@color/blue"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/post_text" />
+        app:layout_constraintTop_toBottomOf="@id/post_text"
+        tools:text="@string/post_link" />
 
     <ImageView
         android:id="@+id/post_image"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/yellow"
+        android:layout_height="400dp"
+        android:layout_marginTop="16dp"
         android:contentDescription="@string/post_image_description"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/post_link" />
+        app:layout_constraintTop_toBottomOf="@id/post_link"
+        tools:src="@color/yellow" />
 
     <TextView
         android:id="@+id/likes_count"
@@ -102,18 +104,18 @@
         android:layout_marginStart="16dp"
         android:drawablePadding="8dp"
         android:gravity="center"
-        android:text="@string/likes_count"
         android:textColor="@color/gray"
         android:textSize="14sp"
         app:drawableStartCompat="@drawable/like"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/share_button" />
+        app:layout_constraintTop_toTopOf="@+id/share_button"
+        tools:text="@string/likes_count" />
 
     <LinearLayout
         android:id="@+id/share_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:gravity="center"
         android:orientation="horizontal"
@@ -125,16 +127,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="@string/shares_count"
             android:textColor="@color/gray"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            tools:text="@string/shares_count" />
 
         <ImageView
             android:id="@+id/share_circle_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:importantForAccessibility="no"
-            android:scaleType="fitXY"
             android:src="@drawable/baseline_circle_24" />
 
         <ImageView
