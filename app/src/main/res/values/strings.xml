@@ -1,16 +1,21 @@
 <resources>
     <string name="app_name">Android_assignment_1</string>
-    <string name="email_or_phone_number">Email or phone number</string>
-    <string name="password">Password</string>
-    <string name="log_in">Log In</string>
-    <string name="sign_up_for_facebook">Sign Up for Facebook</string>
-    <string name="help_center">Help Center</string>
-    <string name="un_blast">Unblast</string>
-    <string name="_2_hrs">2 hrs</string>
+
     <string name="more">more</string>
-    <string name="post_title">Buckle up, because change is coming to WordPress</string>
     <string name="post_link">http://unblast.com/color.schemes</string>
-    <string name="_1_share">1 share</string>
-    <string name="_12">12</string>
-    <string name="facebook">facebook</string>
+
+    <string name="user_name">Unblast</string>
+    <string name="post_metadata">2 hrs • </string>
+    <string name="post_text">Buckle up, because change is coming to WordPress</string>
+
+    <string name="likes_count">12</string>
+    <string name="shares_count">1 Share</string>
+
+    <string name="action_like">Like</string>
+    <string name="action_comment">Comment</string>
+    <string name="action_share">Share</string>
+
+    <string name="profile_picture_description">Profile picture of Unblast</string>
+    <string name="post_image_description">A large yellow square</string>
+    <string name="menu_icon_description">Post options menu</string>
 </resources>
