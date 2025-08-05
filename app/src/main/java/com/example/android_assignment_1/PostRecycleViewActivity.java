@@ -9,7 +9,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.android_assignment_1.post_recycler_view.Post;
+import com.example.android_assignment_1.post_recycler_view.PostDM;
 import com.example.android_assignment_1.post_recycler_view.adapter.PostAdapter;
 
 import java.util.ArrayList;
@@ -30,13 +30,13 @@ public class PostRecycleViewActivity extends AppCompatActivity {
 
         RecyclerView postsRecyclerView = findViewById(R.id.posts_recycler_view);
 
-        List<Post> posts = generateFakePosts();
+        List<PostDM> posts = generateFakePosts();
         PostAdapter adapter = new PostAdapter(posts);
         postsRecyclerView.setAdapter(adapter);
     }
 
-    private List<Post> generateFakePosts() {
-        List<Post> posts = new ArrayList<>();
+    private List<PostDM> generateFakePosts() {
+        List<PostDM> posts = new ArrayList<>();
 
         int[] postImages = {R.drawable.post_image_1, R.drawable.post_image_2, R.drawable.post_image_3};
 
@@ -59,7 +59,7 @@ public class PostRecycleViewActivity extends AppCompatActivity {
 
             int postImageResId = postImages[i % postImages.length];
 
-            posts.add(new Post(userName, postMetadata, postText, postLink, postImageResId, likesCount, sharesCount));
+            posts.add(new PostDM(userName, postMetadata, postText, postLink, postImageResId, likesCount, sharesCount));
         }
         return posts;
     }

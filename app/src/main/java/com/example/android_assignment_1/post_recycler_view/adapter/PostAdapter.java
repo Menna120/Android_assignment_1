@@ -9,15 +9,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.android_assignment_1.post_recycler_view.Post;
+import com.example.android_assignment_1.post_recycler_view.PostDM;
 import com.example.android_assignment_1.R;
 
 import java.util.List;
 
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder> {
-    private final List<Post> postList;
+    private final List<PostDM> postList;
 
-    public PostAdapter(List<Post> postList) {
+    public PostAdapter(List<PostDM> postList) {
         this.postList = postList;
     }
 
@@ -30,7 +30,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull PostViewHolder holder, int position) {
-        Post post = postList.get(position);
+        PostDM post = postList.get(position);
         holder.postImage.setImageResource(post.getPostImageResId());
         holder.userName.setText(post.getUserName());
         holder.postMetadata.setText(post.getPostMetadata());

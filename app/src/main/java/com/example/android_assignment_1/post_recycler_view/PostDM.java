@@ -1,6 +1,6 @@
 package com.example.android_assignment_1.post_recycler_view;
 
-public class Post {
+public class PostDM {
     private final String userName;
     private final String postMetadata;
     private final String postText;
@@ -9,7 +9,7 @@ public class Post {
     private final int likesCount;
     private final int sharesCount;
 
-    public Post(String userName, String postMetadata, String postText, String postLink, int postImageResId, int likesCount, int sharesCount) {
+    public PostDM(String userName, String postMetadata, String postText, String postLink, int postImageResId, int likesCount, int sharesCount) {
         this.userName = userName;
         this.postMetadata = postMetadata;
         this.postText = postText;
