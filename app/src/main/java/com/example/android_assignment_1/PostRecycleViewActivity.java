@@ -15,7 +15,7 @@ import com.example.android_assignment_1.post_recycler_view.adapter.PostAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PostRecycleView extends AppCompatActivity {
+public class PostRecycleViewActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
